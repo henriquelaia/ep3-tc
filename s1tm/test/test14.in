@@ -1,0 +1,33 @@
+M:
+  # Palindromes over {0,1}
+  states: [s, q0, q1, q2, q3, q4, qA, qR]
+  input_alphabet: [0, 1]
+  tape_alphabet_extra: [_, X]
+  start_state: s
+  accept_state: qA
+  reject_state: qR
+  delta:
+    s:
+      0: [q1, _, R] # Match 0
+      1: [q2, _, R] # Match 1
+      _: [qA, _, S] # Empty/Done
+    q1: # Find mating 0 at right end
+      0: [q1, 0, R]
+      1: [q1, 1, R]
+      _: [q3, _, L]
+    q2: # Find mating 1 at right end
+      0: [q2, 0, R]
+      1: [q2, 1, R]
+      _: [q4, _, L]
+    q3: # Check for 0
+      0: [q0, _, L] # Found, go back
+      _: [qA, _, S] # Single 0, done
+    q4: # Check for 1
+      1: [q0, _, L] # Found, go back
+      _: [qA, _, S] # Single 1, done
+    q0: # Return to start
+      0: [q0, 0, L]
+      1: [q0, 1, L]
+      _: [s, _, R]
+
+w: "101"
