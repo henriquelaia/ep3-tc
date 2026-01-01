@@ -1,0 +1,35 @@
+M:
+  states: [s, qA, qR]
+  input_alphabet: [0, 1]
+  tape_alphabet_extra: [_]
+  start_state: s
+  accept_state: qA
+  reject_state: qR
+  delta:
+    s: # Move to end
+      0: [s, 0, R]
+      1: [s, 1, R]
+      _: [qA, _, L] # Check last digit (cheat: L from blank is last char)
+    
+    # Actually, simpler: verify if ends with 1
+    # State qA will check
+    # Wait, need specific states.
+    # Let's rewrite: s scans right. q1 is 'last saw 0', q2 is 'last saw 1'.
+    
+  states: [s, q0, q1, qA, qR]
+  start_state: s
+  delta:
+    s: # Empty
+      0: [q0, 0, R]
+      1: [q1, 1, R]
+      _: [qR, _, S] # Empty string not odd
+    q0: # Saw 0
+      0: [q0, 0, R]
+      1: [q1, 1, R]
+      _: [qR, _, S] # Ends in 0 -> Even
+    q1: # Saw 1
+      0: [q0, 0, R]
+      1: [q1, 1, R]
+      _: [qA, _, S] # Ends in 1 -> Odd
+
+w: "11"

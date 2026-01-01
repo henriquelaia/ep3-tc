@@ -90,6 +90,10 @@ let yaml_val = function
 (* string para tm_w *)
 let tm_w_de_string s = s |> Yaml.of_string_exn |> tm_w_of_yaml |> yaml_val
 
+(* tm_w para string *)
+let tm_w_para_string tm_w = tm_w |> tm_w_to_yaml |> Yaml.to_string_exn
+[@@warning "-32"]
+
 
 
 (* ------------------------------------------------------------ *)

@@ -1,0 +1,779 @@
+(rule
+  (with-outputs-to test01.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test01.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test01.exp test01.out))
+)
+
+(rule
+  (with-outputs-to test02.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test02.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test02.exp test02.out))
+)
+
+(rule
+  (with-outputs-to test03.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test03.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test03.exp test03.out))
+)
+
+(rule
+  (with-outputs-to test04.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test04.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test04.exp test04.out))
+)
+(rule
+  (with-outputs-to test05.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test05.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test05.exp test05.out))
+)
+
+(rule
+  (with-outputs-to test06.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test06.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test06.exp test06.out))
+)
+
+(rule
+  (with-outputs-to test07.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test07.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test07.exp test07.out))
+)
+
+(rule
+  (with-outputs-to test08.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test08.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test08.exp test08.out))
+)
+
+(rule
+  (with-outputs-to test09.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test09.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test09.exp test09.out))
+)
+
+(rule
+  (with-outputs-to test10.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test10.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test10.exp test10.out))
+)
+
+(rule
+  (with-outputs-to test11.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test11.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test11.exp test11.out))
+)
+
+(rule
+  (with-outputs-to test12.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test12.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test12.exp test12.out))
+)
+
+(rule
+  (with-outputs-to test13.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test13.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test13.exp test13.out))
+)
+
+(rule
+  (with-outputs-to test14.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test14.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test14.exp test14.out))
+)
+
+(rule
+  (with-outputs-to test15.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test15.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test15.exp test15.out))
+)
+
+(rule
+  (with-outputs-to test16.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test16.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test16.exp test16.out))
+)
+
+(rule
+  (with-outputs-to test17.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test17.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test17.exp test17.out))
+)
+
+(rule
+  (with-outputs-to test18.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test18.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test18.exp test18.out))
+)
+
+(rule
+  (with-outputs-to test19.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test19.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test19.exp test19.out))
+)
+
+(rule
+  (with-outputs-to test20.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test20.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test20.exp test20.out))
+)
+
+(rule
+  (with-outputs-to test21.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test21.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test21.exp test21.out))
+)
+
+(rule
+  (with-outputs-to test22.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test22.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test22.exp test22.out))
+)
+
+(rule
+  (with-outputs-to test23.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test23.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test23.exp test23.out))
+)
+
+(rule
+  (with-outputs-to test24.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test24.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test24.exp test24.out))
+)
+
+(rule
+  (with-outputs-to test25.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test25.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test25.exp test25.out))
+)
+
+(rule
+  (with-outputs-to test26.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test26.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test26.exp test26.out))
+)
+
+(rule
+  (with-outputs-to test27.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test27.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test27.exp test27.out))
+)
+
+(rule
+  (with-outputs-to test05.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test05.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test05.exp test05.out))
+)
+
+(rule
+  (with-outputs-to test06.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test06.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test06.exp test06.out))
+)
+
+(rule
+  (with-outputs-to test07.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test07.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test07.exp test07.out))
+)
+
+(rule
+  (with-outputs-to test08.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test08.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test08.exp test08.out))
+)
+
+(rule
+  (with-outputs-to test09.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test09.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test09.exp test09.out))
+)
+
+(rule
+  (with-outputs-to test10.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test10.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test10.exp test10.out))
+)
+
+(rule
+  (with-outputs-to test11.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test11.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test11.exp test11.out))
+)
+
+(rule
+  (with-outputs-to test12.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test12.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test12.exp test12.out))
+)
+
+(rule
+  (with-outputs-to test13.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test13.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test13.exp test13.out))
+)
+
+(rule
+  (with-outputs-to test14.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test14.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test14.exp test14.out))
+)
+
+(rule
+  (with-outputs-to test15.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test15.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test15.exp test15.out))
+)
+
+(rule
+  (with-outputs-to test16.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test16.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test16.exp test16.out))
+)
+
+(rule
+  (with-outputs-to test17.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test17.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test17.exp test17.out))
+)
+
+(rule
+  (with-outputs-to test18.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test18.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test18.exp test18.out))
+)
+
+(rule
+  (with-outputs-to test19.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test19.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test19.exp test19.out))
+)
+
+(rule
+  (with-outputs-to test20.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test20.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test20.exp test20.out))
+)
+
+(rule
+  (with-outputs-to test21.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test21.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test21.exp test21.out))
+)
+
+(rule
+  (with-outputs-to test22.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test22.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test22.exp test22.out))
+)
+
+(rule
+  (with-outputs-to test23.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test23.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test23.exp test23.out))
+)
+
+(rule
+  (with-outputs-to test24.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test24.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test24.exp test24.out))
+)
+
+(rule
+  (with-outputs-to test25.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test25.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test25.exp test25.out))
+)
+
+(rule
+  (with-outputs-to test26.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test26.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test26.exp test26.out))
+)
+
+(rule
+  (with-outputs-to test27.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test27.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test27.exp test27.out))
+)
+
+(rule
+  (with-outputs-to test28.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test28.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test28.exp test28.out))
+)
+
+(rule
+  (with-outputs-to test29.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test29.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test29.exp test29.out))
+)
+
+(rule
+  (with-outputs-to test30.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test30.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test30.exp test30.out))
+)
+
+(rule
+  (with-outputs-to test31.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test31.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test31.exp test31.out))
+)
+
+(rule
+  (with-outputs-to test32.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test32.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test32.exp test32.out))
+)
+
+(rule
+  (with-outputs-to test33.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test33.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test33.exp test33.out))
+)
+
+(rule
+  (with-outputs-to test34.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test34.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test34.exp test34.out))
+)
+
+(rule
+  (with-outputs-to test35.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test35.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test35.exp test35.out))
+)
+
+(rule
+  (with-outputs-to test36.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test36.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test36.exp test36.out))
+)
+
+(rule
+  (with-outputs-to test37.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test37.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test37.exp test37.out))
+)
+
+(rule
+  (with-outputs-to test38.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test38.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test38.exp test38.out))
+)
+
+(rule
+  (with-outputs-to test39.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test39.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test39.exp test39.out))
+)
+
+(rule
+  (with-outputs-to test40.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test40.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test40.exp test40.out))
+)
+
+(rule
+  (with-outputs-to test41.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test41.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test41.exp test41.out))
+)
+
+(rule
+  (with-outputs-to test42.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test42.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test42.exp test42.out))
+)
+
+(rule
+  (with-outputs-to test43.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test43.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test43.exp test43.out))
+)
+
+(rule
+  (with-outputs-to test44.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test44.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test44.exp test44.out))
+)
+
+(rule
+  (with-outputs-to test45.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test45.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test45.exp test45.out))
+)
+
+(rule
+  (with-outputs-to test46.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test46.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test46.exp test46.out))
+)
+
+(rule
+  (with-outputs-to test47.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test47.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test47.exp test47.out))
+)
+
+(rule
+  (with-outputs-to test48.out
+  (with-accepted-exit-codes 0
+    (run bash -c "cat %{dep:test48.in} | %{exe:../s1tm.exe}")
+)))
+
+(rule
+  (alias runtest)
+  (action (diff test48.exp test48.out))
+)

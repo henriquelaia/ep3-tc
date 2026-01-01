@@ -1,0 +1,30 @@
+M:
+  # Accepts 0^m 1 0^n where m > n
+  states: [s, q1, q2, q3, q4, qA, qR]
+  input_alphabet: [0, 1]
+  tape_alphabet_extra: [_, x]
+  start_state: s
+  accept_state: qA
+  reject_state: qR
+  delta:
+    s:
+      0: [q1, x, R] # Mark left 0
+      1: [qR, 1, S] # No left 0s or started with 1 (fail if m=0)
+      x: [s, x, R] # Skip marked
+    q1:
+      0: [q1, 0, R]
+      1: [q2, 1, R] # Found separator
+      x: [q1, x, R]
+    q2:
+      x: [q2, x, R] # Skip marked right 0s
+      0: [q3, x, L] # Mark right 0
+      _: [qA, _, S] # No right 0s left! m > n verified (since we marked a left 0 and failed to find a right 0)
+    q3:
+      x: [q3, x, L]
+      0: [q3, 0, L]
+      1: [q4, 1, L] # Back passed separator
+    q4:
+      0: [q4, 0, L] # Go back to start
+      x: [s, x, R] # Found marker, restart s
+
+w: "010"
