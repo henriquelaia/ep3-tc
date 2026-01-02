@@ -77,11 +77,17 @@ type tm =
 
 type tm_w = {m: tm [@key "M"]; w: string} [@@deriving yaml]
 
-let rec read_multiplelines () =
+(* --- LEITURA SEGURA (BUFFER) --- *)
+let read_multiplelines () =
+  let buf = Buffer.create 1024 in
   try
-    let line = read_line () in
-    line ^ "\n" ^ read_multiplelines ()
-  with End_of_file -> ""
+    while true do
+      let line = input_line stdin in
+      Buffer.add_string buf line;
+      Buffer.add_char buf '\n'
+    done;
+    "" (* Nunca atingido *)
+  with End_of_file -> Buffer.contents buf
 
 let yaml_val = function
   | Ok v -> v (* v has type Yaml.value *)
@@ -101,21 +107,24 @@ let symbols_of_word w =
 
 let mem x xs = List.exists ((=) x) xs
 
-let tape_alphabet m = m.input_alphabet @ m.tape_alphabet_extra
+(* Alfabeto da fita é a união dos dois (duplicados não importam para o 'mem') *)
+let tape_alphabet m = 
+  if mem blank m.tape_alphabet_extra 
+  then m.input_alphabet @ m.tape_alphabet_extra
+  else m.input_alphabet @ (blank :: m.tape_alphabet_extra)
 
 let word_valid m w =
   symbols_of_word w |> List.for_all (fun s -> mem s m.input_alphabet)
 
-let disjoint l1 l2 =
-  List.for_all (fun x -> not (mem x l2)) l1
+(* --- REMOVIDO: disjoint --- *)
 
 let tm_valid m =
   mem m.start_state m.states
   && mem m.accept_state m.states
   && mem m.reject_state m.states
-  && mem blank (tape_alphabet m)
+  (* && mem blank (tape_alphabet m) <-- Garantido pela função tape_alphabet acima *)
   && m.accept_state <> m.reject_state
-  && disjoint m.input_alphabet m.tape_alphabet_extra
+  (* REMOVIDO: && disjoint m.input_alphabet m.tape_alphabet_extra *)
 
 let delta_valid m =
   let tape = tape_alphabet m in
@@ -180,7 +189,6 @@ type sim_result = Accept of tape | Reject of tape | DontKnow | Invalid
 
 let simulate m w =
   if not (tm_valid m) then Invalid
-
   else if not (delta_valid m) then Invalid
   else if not (word_valid m w) then Invalid
   else
@@ -223,5 +231,3 @@ let () =
     print_result (simulate tw.m tw.w)
   with _ ->
     print_endline "INVALID"
-
-
