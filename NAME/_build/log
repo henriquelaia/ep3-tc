@@ -1,0 +1,6 @@
+# dune init project NAME
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/henriquelaia/.cache/dune/db
+# Workspace root: /Users/henriquelaia/Desktop/ep3-tc/NAME
+# Auto-detected concurrency: 8
