@@ -7,5 +7,5 @@ M:
   reject_state: qR
   delta:
     q0:
-      "_": [q0, "_", S]
+      "_": [qA, "#", S]
 w: ""

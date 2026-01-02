@@ -1,3 +1,4 @@
+
 (rule
  (with-outputs-to
   test01.out
@@ -9,7 +10,6 @@
  (alias runtest)
  (action
   (diff test01.exp test01.out)))
-
 (rule
  (with-outputs-to
   test02.out
@@ -21,7 +21,6 @@
  (alias runtest)
  (action
   (diff test02.exp test02.out)))
-
 (rule
  (with-outputs-to
   test03.out
@@ -33,7 +32,6 @@
  (alias runtest)
  (action
   (diff test03.exp test03.out)))
-
 (rule
  (with-outputs-to
   test04.out
@@ -45,7 +43,6 @@
  (alias runtest)
  (action
   (diff test04.exp test04.out)))
-
 (rule
  (with-outputs-to
   test05.out
@@ -57,7 +54,6 @@
  (alias runtest)
  (action
   (diff test05.exp test05.out)))
-
 (rule
  (with-outputs-to
   test06.out
@@ -69,7 +65,6 @@
  (alias runtest)
  (action
   (diff test06.exp test06.out)))
-
 (rule
  (with-outputs-to
   test07.out
@@ -81,3 +76,36 @@
  (alias runtest)
  (action
   (diff test07.exp test07.out)))
+(rule
+ (with-outputs-to
+  test08.out
+  (with-accepted-exit-codes
+   0
+   (run bash -c "cat %{dep:test08.in} | %{exe:../s1tm.exe}"))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff test08.exp test08.out)))
+(rule
+ (with-outputs-to
+  test09.out
+  (with-accepted-exit-codes
+   0
+   (run bash -c "cat %{dep:test09.in} | %{exe:../s1tm.exe}"))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff test09.exp test09.out)))
+(rule
+ (with-outputs-to
+  test10.out
+  (with-accepted-exit-codes
+   0
+   (run bash -c "cat %{dep:test10.in} | %{exe:../s1tm.exe}"))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff test10.exp test10.out)))
